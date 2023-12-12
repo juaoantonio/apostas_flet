@@ -24,7 +24,7 @@ def odds():
             base[c] = (r.randint(1, 5) + r.randint(1, 99)/100)
     print(base)
     return base
-odds()
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ################################## RECEBER OS PLACARES APOSTADOS ##########################################
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,12 +79,15 @@ def resultados():  # Sorteia o número de gols que cada time fará
     base = times()
     with open(r"placares", "w", encoding="utf-8"):
         for numero in base:
-            a = r.randint(
-                1, 10
-            )  # Posso sortear um intervalo melhor de acordo com a qualidade dos times
-            base[numero] = a
+            a = r.randint(1, 10)
+            if a > 8:
+                b = r.randint(5,10)
+            else:
+                b = r.randint(1,4)
+            base[numero] = b
+    
     return base
-
+    
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ####################################### COMPARA APOSTA COM OS PLACARES ####################################
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
