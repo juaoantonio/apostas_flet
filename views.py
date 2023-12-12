@@ -107,7 +107,7 @@ def comparacao():
     return win_loss
 
 def retorno():
-    valor = tc.valor()
+    valor = tc.aposta_valor()
     odds = odds()
     comparacao = comparacao()
     total = 0
@@ -118,3 +118,5 @@ def retorno():
             total += 0
             
     return total
+
+print(retorno())

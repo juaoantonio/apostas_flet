@@ -450,7 +450,7 @@ def view():
 
 def salvar(e):
     valores = [placar_atl_pr.value, placar_atl_go.value, placar_atl_mg.value, placar_bahia.value, placar_bot.value, placar_braga.value, placar_cor.value, placar_cric.value, placar_cru.value, placar_cuiaba.value, placar_fla.value, placar_flu.value, placar_fort.value, placar_gre.value, placar_inter.value, placar_juv.value, placar_pal.value, placar_sp.value, placar_vas.value, placar_vit.value]
-    return valores
+    return placar_atl_pr
 
 def aposta_valor(e):
     valor = [aposta.value]

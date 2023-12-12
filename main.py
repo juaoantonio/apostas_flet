@@ -1,6 +1,6 @@
 import flet as ft
 import controles as c
-import views as vi
+# import views as vi
 
 def main(page: ft.Page):
     c.init(page)
