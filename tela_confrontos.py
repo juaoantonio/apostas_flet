@@ -2,7 +2,7 @@ import flet as ft
 import controles as c
 import tela_apostas
 
-
+#Criação da parte do flamengo
 img_fla = ft.Image(
     src='apostas_flet/flamengo.png', 
     fit= ft.ImageFit.CONTAIN,
@@ -11,10 +11,12 @@ flamengo = ft.Container(
 content= ft.Text(value='Flamengo')
 )
 
+#criação dos textfields para dados das apostas
 global placar_flamengo, placar_vasco
 placar_flamengo = ft.TextField(hint_text='N', width= 50, text_align= ft.alignment.center)
 placar_vasco = ft.TextField(hint_text='N', width= 50, text_align= ft.alignment.center)
 
+#criação da parte do flamengo
 img_vasco = ft.Image(
     src='apostas_flet/vasco.png',
     fit= ft.ImageFit.CONTAIN,
@@ -40,7 +42,7 @@ def view():
                     img_vasco,
                     ft.ElevatedButton(
                         text='Salvar', on_click= lambda _: print(placar_flamengo.value, placar_vasco.value)
-                    ),
+                    ), #printa na tela e salva os valores colocados no textfield
                 ]
             ),
             ft.Row(
