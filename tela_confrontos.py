@@ -242,7 +242,7 @@ img_sp = ft.Image(
     fit= ft.ImageFit.CONTAIN,
 )
 sp = ft.Container(
-content= ft.Text(value='Juventude')
+content= ft.Text(value='São Paulo')
 )
 
 #Criação da parte do vasco
@@ -269,7 +269,7 @@ img_vit = ft.Image(
     fit= ft.ImageFit.CONTAIN,
 )
 vit = ft.Container(
-content= ft.Text(value='Juventude')
+content= ft.Text(value='Vitoria')
 )
 
 def view():
