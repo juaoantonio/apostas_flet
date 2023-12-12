@@ -1,4 +1,10 @@
+Atlético-Pr, Atlético-Go
+Atlético-Mg, Bahia
+Botafogo, Bragantino
 Corinthians, Criciúma
 Cruzeiro, Cuiabá
 Flamengo, Fluminense
 Fortaleza, Grêmio
+Internacional, Juventude
+Palmeiras, São Paulo
+Vasco, Vitória
