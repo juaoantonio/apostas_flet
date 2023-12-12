@@ -272,12 +272,23 @@ vit = ft.Container(
 content= ft.Text(value='Vitoria')
 )
 
+aposta = ft.TextField(
+    hint_text='valor para aposta'
+)
+
 def view():
     return ft.View(
         'tela_confrontos',
         [
             ft.Column(
                 [
+                    ft.Row(
+                        [
+                            ft.Container(
+                                content= ft.Text(value='Confrontos da rodada', size= 30)
+                            )
+                        ]
+                    ),
                     ft.Row(
                 [
                     img_atl_pr,
@@ -289,9 +300,6 @@ def view():
                     placar_atl_go,
                     atl_go,
                     img_atl_go,
-                    ft.ElevatedButton(
-                        text='Salvar', on_click= lambda _: print(placar_atl_pr.value, placar_atl_go.value)
-                    ), #printa na tela e salva os valores colocados no textfield
                 ]
             ),
             ft.Row(
@@ -305,9 +313,6 @@ def view():
                     placar_bahia,
                     bahia,
                     img_bahia,
-                    ft.ElevatedButton(
-                        text='Salvar', on_click= lambda _: print(placar_atl_mg.value, placar_bahia.value)
-                    ), #printa na tela e salva os valores colocados no textfield
                 ]
             ),
             ft.Row(
@@ -321,9 +326,6 @@ def view():
                     placar_braga,
                     braga,
                     img_braga,
-                    ft.ElevatedButton(
-                        text='Salvar', on_click= lambda _: print(placar_bot.value, placar_braga.value)
-                    ), #printa na tela e salva os valores colocados no textfield
                 ]
             ),
             ft.Row(
@@ -337,9 +339,6 @@ def view():
                     placar_cric,
                     cric,
                     img_cric,
-                    ft.ElevatedButton(
-                        text='Salvar', on_click= lambda _: print(placar_cor.value, placar_cric.value)
-                    ), #printa na tela e salva os valores colocados no textfield
                 ]
             ),
             ft.Row(
@@ -353,9 +352,6 @@ def view():
                     placar_cuiaba,
                     cuiaba,
                     img_cuiaba,
-                    ft.ElevatedButton(
-                        text='Salvar', on_click= lambda _: print(placar_cru.value, placar_cuiaba.value)
-                    ), #printa na tela e salva os valores colocados no textfield
                 ]
             ),
             ft.Row(
@@ -369,9 +365,6 @@ def view():
                     placar_flu,
                     flu,
                     img_flu,
-                    ft.ElevatedButton(
-                        text='Salvar', on_click= lambda _: print(placar_fla.value, placar_flu.value)
-                    ), #printa na tela e salva os valores colocados no textfield
                 ]
             ),
             ft.Row(
@@ -385,9 +378,6 @@ def view():
                     placar_gre,
                     gre,
                     img_gre,
-                    ft.ElevatedButton(
-                        text='Salvar', on_click= lambda _: print(placar_fort.value, placar_gre.value)
-                    ), #printa na tela e salva os valores colocados no textfield
                 ]
             ),
             ft.Row(
@@ -401,9 +391,6 @@ def view():
                     placar_juv,
                     juv,
                     img_juv,
-                    ft.ElevatedButton(
-                        text='Salvar', on_click= lambda _: print(placar_inter.value, placar_juv.value)
-                    ), #printa na tela e salva os valores colocados no textfield
                 ]
             ),
             ft.Row(
@@ -417,9 +404,6 @@ def view():
                     placar_sp,
                     sp,
                     img_sp,
-                    ft.ElevatedButton(
-                        text='Salvar', on_click= lambda _: print(placar_pal.value, placar_sp.value)
-                    ), #printa na tela e salva os valores colocados no textfield
                 ]
             ),
             ft.Row(
@@ -433,9 +417,13 @@ def view():
                     placar_vit,
                     vit,
                     img_vit,
+                ]
+            ),
+            ft.Row(
+                [
                     ft.ElevatedButton(
-                        text='Salvar', on_click= lambda _: print(placar_vas.value, placar_vit.value)
-                    ), #printa na tela e salva os valores colocados no textfield
+                    text='salvar', on_click= salvar,
+                )
                 ]
             ),
             ft.Row(
@@ -443,7 +431,8 @@ def view():
                     ft.Container(
                         content= ft.Text(value= 'Adicione valor da aposta: ')
                     ),
-                    ft.TextField(hint_text='valor'),
+                    aposta,
+                    ft.ElevatedButton(text='salvar valor de aposta', on_click= aposta_valor)
                 ]
             ),
             ft.Row(
@@ -458,3 +447,11 @@ def view():
             )
         ]
     )
+
+def salvar(e):
+    valores = [placar_atl_pr.value, placar_atl_go.value, placar_atl_mg.value, placar_bahia.value, placar_bot.value, placar_braga.value, placar_cor.value, placar_cric.value, placar_cru.value, placar_cuiaba.value, placar_fla.value, placar_flu.value, placar_fort.value, placar_gre.value, placar_inter.value, placar_juv.value, placar_pal.value, placar_sp.value, placar_vas.value, placar_vit.value]
+    return valores
+
+def aposta_valor(e):
+    valor = [aposta.value]
+    return valor
