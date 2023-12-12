@@ -276,7 +276,9 @@ def view():
     return ft.View(
         'tela_confrontos',
         [
-            ft.Row(
+            ft.Column(
+                [
+                    ft.Row(
                 [
                     img_atl_pr,
                     atl_pr,
@@ -451,5 +453,8 @@ def view():
                     )
                 ]
             ),
+                ],
+                scroll= 'always', expand= True
+            )
         ]
     )
