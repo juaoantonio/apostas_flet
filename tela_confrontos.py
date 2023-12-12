@@ -10,12 +10,17 @@ img_fla = ft.Image(
 flamengo = ft.Container(
 content= ft.Text(value='Flamengo')
 )
-placar_flamengo = ft.TextField(hint_text='0')
-txt = ft.Text(value=f'{placar_flamengo.value}')
+
+global placar_flamengo, placar_vasco
+placar_flamengo = ft.TextField(hint_text='N', width= 50, text_align= ft.alignment.center)
+placar_vasco = ft.TextField(hint_text='N', width= 50, text_align= ft.alignment.center)
 
 img_vasco = ft.Image(
     src='apostas_flet/vasco.png',
     fit= ft.ImageFit.CONTAIN,
+)
+vasco = ft.Container(
+content= ft.Text(value='Vasco')
 )
 
 def view():
@@ -30,11 +35,12 @@ def view():
                     ft.Container(
                         content = ft.Text(value = 'x')
                     ),
-                    ft.TextField(hint_text='0'),
-                    ft.Container(
-                        content= ft.Text(value= 'Vasco')
-                    ),
+                    placar_vasco,
+                    vasco,
                     img_vasco,
+                    ft.ElevatedButton(
+                        text='Salvar', on_click= lambda _: print(placar_flamengo.value, placar_vasco.value)
+                    ),
                 ]
             ),
             ft.Row(
