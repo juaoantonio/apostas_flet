@@ -1,5 +1,5 @@
 import random as r
-
+import tela_confrontos as tc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ############################################# CRIA AS ODDS ###################################################
@@ -43,16 +43,18 @@ def equipes():  # Organiza os times que receberão os placares do apostador
         return db
 
 
+
+
 def apostas():  # Recebe os palpites do apostador
     base = equipes()
+    resultados = salvar()
     with open(r"base", "w", encoding="utf-8") as f:
-        for placares in base:
-            novo = r.randint(
-                1, 10
-            ) 
-            base[placares] = novo
+        for a in base:
+            for b in resultados:
+                base[a] = b
     print(base)
     return base
+apostas()                
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ######################################## GERA PLACARES ALEATÓRIOS############################################
@@ -83,11 +85,11 @@ def resultados():  # Sorteia o número de gols que cada time fará
             if a > 8:
                 b = r.randint(5,10)
             else:
-                b = r.randint(1,4)
+                b = r.randint(0,4)
             base[numero] = b
     
     return base
-    
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ####################################### COMPARA APOSTA COM OS PLACARES ####################################
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
