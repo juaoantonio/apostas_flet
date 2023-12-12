@@ -1,6 +1,8 @@
 import flet as ft
 import controles as c
 import tela_apostas
+from flet import View, Page, AppBar, ElevatedButton, Text
+from flet import RouteChangeEvent, ViewPopEvent, CrossAxisAlignment, MainAxisAlignment
 
 #Criação da parte do atletico paranaense
 img_atl_pr = ft.Image(
@@ -286,7 +288,8 @@ def view():
                         [
                             ft.Container(
                                 content= ft.Text(value='Confrontos da rodada', size= 30)
-                            )
+                            ),
+                            ft.ElevatedButton(text='Instruções',on_click=lambda _: c.page.go('instrucoes')) #Pagina das Apostas
                         ]
                     ),
                     ft.Row(
@@ -455,3 +458,39 @@ def salvar(e):
 def aposta_valor(e):
     valor = [aposta.value]
     return valor
+
+# def route_change(e: RouteChangeEvent) -> None:
+#     c.page.views.clear()
+
+#     c.page.views.append(
+#         View(
+#              route='/',
+#             controls=[
+#                 AppBar(title=Text('Site de Apostas'),bgcolor='Red'),
+#                 ElevatedButton(text='Instruções',on_click=lambda _: c.page.go('/instruções')) #Pagina das Apostas
+#             ], vertical_alignment=MainAxisAlignment.START,
+#             horizontal_alignment=CrossAxisAlignment.END,
+#             spacing=26
+#         )
+#     )
+#     if c.page.route == '/instruções':
+#         c.page.views.append(
+#             View(
+#                 route='/instruções',
+#                 controls=[
+#                      AppBar(title=Text('Instruções'),bgcolor='Blue')    #pagina das Instruções                 
+#                 ],
+#                 vertical_alignment=MainAxisAlignment.START,
+#                 horizontal_alignment=CrossAxisAlignment.START,
+#                 spacing=26
+
+#             )
+#         )
+#     c.page.update()    
+# def view_pop(e: ViewPopEvent) -> None:
+#     c.page.views.pop()
+#     top_view: View = c.page.views[-1]
+#     c.page.go(top_view.route)
+# c.page.on_route_change = route_change
+# c.page.on_view_pop = view_pop
+# c.page.go(c.page.route)

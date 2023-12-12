@@ -1,5 +1,6 @@
 import flet as ft
 import tela_confrontos
+import instrucoes
 import tela_apostas
 
 def init(p):
@@ -7,7 +8,8 @@ def init(p):
     page = p
     telas = {
         '0': tela_confrontos.view(),
-        '1': tela_apostas.view()
+        '1': tela_apostas.view(),
+        'instrucoes': instrucoes.view()
     }
 
 def route_change(route):
