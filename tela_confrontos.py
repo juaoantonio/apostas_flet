@@ -6,7 +6,7 @@ from flet import RouteChangeEvent, ViewPopEvent, CrossAxisAlignment, MainAxisAli
 
 # Criação da parte do atletico paranaense
 img_atl_pr = ft.Image(
-    src="./icones/atletico_pr.png",
+    src="icones/atletico_pr.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -20,7 +20,7 @@ placar_atl_go = ft.TextField(hint_text="N", width=50, text_align=ft.alignment.ce
 
 # criação da parte do atletico go
 img_atl_go = ft.Image(
-    src="./icones/Atlético_Goianiense.svg.png",
+    src="icones/Atlético_Goianiense.svg.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -29,7 +29,7 @@ atl_go = ft.Container(content=ft.Text(value="Atlético-Go"))
 
 # Criação da parte do atletico mineiro
 img_atl_mg = ft.Image(
-    src="./icones/atl_mg.png",
+    src="icones/atl_mg.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -43,7 +43,7 @@ placar_bahia = ft.TextField(hint_text="N", width=50, text_align=ft.alignment.cen
 
 # criação da parte do bahia
 img_bahia = ft.Image(
-    src="./icones/bahia.png",
+    src="icones/bahia.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -52,7 +52,7 @@ bahia = ft.Container(content=ft.Text(value="Bahia"))
 
 # Criação da parte do botafogo
 img_bot = ft.Image(
-    src="./icones/Botafogo.svg.png",
+    src="icones/Botafogo.svg.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -66,7 +66,7 @@ placar_braga = ft.TextField(hint_text="N", width=50, text_align=ft.alignment.cen
 
 # criação da parte do bahia
 img_braga = ft.Image(
-    src="./icones/bragantino.png",
+    src="icones/bragantino.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -75,7 +75,7 @@ braga = ft.Container(content=ft.Text(value="Bragantino"))
 
 # Criação da parte do corinthians
 img_cor = ft.Image(
-    src="./icones/corinthians.png",
+    src="icones/corinthians.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -89,7 +89,7 @@ placar_cric = ft.TextField(hint_text="N", width=50, text_align=ft.alignment.cent
 
 # criação da parte do criciuma
 img_cric = ft.Image(
-    src="./icones/criciuma.svg.png",
+    src="icones/criciuma.svg.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -98,7 +98,7 @@ cric = ft.Container(content=ft.Text(value="Criciuma"))
 
 # Criação da parte do cruzeiro
 img_cru = ft.Image(
-    src="./icones/cruzeiro.png",
+    src="icones/cruzeiro.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -112,7 +112,7 @@ placar_cuiaba = ft.TextField(hint_text="N", width=50, text_align=ft.alignment.ce
 
 # criação da parte do cuiaba
 img_cuiaba = ft.Image(
-    src="./icones/cuiaba.svg.png",
+    src="icones/cuiaba.svg.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -121,7 +121,7 @@ cuiaba = ft.Container(content=ft.Text(value="Cuiaba"))
 
 # Criação da parte do flamengo
 img_fla = ft.Image(
-    src="./icones/flamengo.png",
+    src="icones/flamengo.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -135,7 +135,7 @@ placar_flu = ft.TextField(hint_text="N", width=50, text_align=ft.alignment.cente
 
 # criação da parte do cuiaba
 img_flu = ft.Image(
-    src="./icones/fluminense.png",
+    src="icones/fluminense.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -144,7 +144,7 @@ flu = ft.Container(content=ft.Text(value="Fluminense"))
 
 # Criação da parte do fortaleza
 img_fort = ft.Image(
-    src="./icones/fortaleza.svg.png",
+    src="icones/fortaleza.svg.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -158,7 +158,7 @@ placar_gre = ft.TextField(hint_text="N", width=50, text_align=ft.alignment.cente
 
 # criação da parte do cuiaba
 img_gre = ft.Image(
-    src="./icones/Gremio.svg.png",
+    src="icones/Gremio.svg.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -167,7 +167,7 @@ gre = ft.Container(content=ft.Text(value="Gremio"))
 
 # Criação da parte do Internacional
 img_inter = ft.Image(
-    src="./icones/inter.svg.png",
+    src="icones/inter.svg.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -181,7 +181,7 @@ placar_juv = ft.TextField(hint_text="N", width=50, text_align=ft.alignment.cente
 
 # criação da parte do cuiaba
 img_juv = ft.Image(
-    src="./icones/juventude.png",
+    src="icones/juventude.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -190,7 +190,7 @@ juv = ft.Container(content=ft.Text(value="Juventude"))
 
 # Criação da parte do palmeiras
 img_pal = ft.Image(
-    src="./icones/palmeiras.png",
+    src="icones/palmeiras.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -204,7 +204,7 @@ placar_sp = ft.TextField(hint_text="N", width=50, text_align=ft.alignment.center
 
 # criação da parte do cuiaba
 img_sp = ft.Image(
-    src="./icones/sao_paulo.png",
+    src="icones/sao_paulo.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -213,7 +213,7 @@ sp = ft.Container(content=ft.Text(value="São Paulo"))
 
 # Criação da parte do vasco
 img_vas = ft.Image(
-    src="./icones/vasco.png",
+    src="icones/vasco.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
@@ -227,7 +227,7 @@ placar_vit = ft.TextField(hint_text="N", width=50, text_align=ft.alignment.cente
 
 # criação da parte do vitoria
 img_vit = ft.Image(
-    src="./icones/vitoria.png",
+    src="icones/vitoria.png",
     height=70,
     width=70,
     fit=ft.ImageFit.CONTAIN,
