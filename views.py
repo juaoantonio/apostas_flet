@@ -47,17 +47,17 @@ def equipes():  # Organiza os times que receberão os placares do apostador
 
 def apostas():  # Recebe os palpites do apostador
     base = equipes()
-    resultados = salvar()
+    resultados = tc.salvar()
     with open(r"base", "w", encoding="utf-8") as f:
-        for a in base:
-            for b in resultados:
-                base[a] = b
-    print(base)
+        for a in base: #Percorre as equipes
+            for b in resultados: #Percorre quantos gols cada time fez
+                base[a] = int(b) # time[gols da equipe] recebe quantos gol o time fez
+    
     return base
-apostas()                
+           
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-######################################## GERA PLACARES ALEATÓRIOS############################################
+######################################## GERA PLACARES ALEATÓRIOS ############################################
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -104,5 +104,17 @@ def comparacao():
             win_loss.append(0)
         else:
             win_loss.append(1)
-    print(win_loss)
     return win_loss
+
+def retorno():
+    valor = tc.valor()
+    odds = odds()
+    comparacao = comparacao()
+    total = 0
+    for a, b in zip(odds, comparacao):
+        if b == 1:
+            total += (valor * a)
+        else:
+            total += 0
+            
+    return total
